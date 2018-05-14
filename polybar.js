@@ -10,8 +10,7 @@ const queue = new Queue(({ pid, cmd }, cb) => {
     }
     cb(null);
   })
-}, { concurrent: 2 })
-
+}, { concurrent: 1})
 
 exports.hook = (module, index, pid) => {
   queue.push({
